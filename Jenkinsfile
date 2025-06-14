@@ -26,7 +26,7 @@ pipeline {
         }
         stage('run docker container') {
             steps {
-                sh "docker run -d --name hello-app -p 8090:8090 ${IMAGE_NAME}:${TGA}"
+                sh "docker run -d --name hello-app -p 5090:5090 hello-app"
             }
         }   
     
