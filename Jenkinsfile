@@ -18,10 +18,9 @@ pipeline {
         }
         stage('build docker image') {
             steps {
-                steps {
 			sh 'docker build -t hello-app .'
                  
-                }
+                
             }
         }
         stage('run docker container') {
