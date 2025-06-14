@@ -1,0 +1,1 @@
+mvn clean package isnot running while making dockerfile, check it and run the docker container and ci/cd  pipeline with jenkins, configure a jenkins pipeline to automatically fetch code from GIT, run the build process, build the docker image, push the imaeg to docker hub, deploy the application to server
