@@ -1,8 +1,10 @@
 pipeline {
     agent any
+
     environment {
         IMAGE_NAME = 'hello-app'
         TAG = 'latest'
+    }
     stages {
         stage('Checkout') {
             steps {
