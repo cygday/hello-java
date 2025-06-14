@@ -18,14 +18,14 @@ pipeline {
         }
         stage('build docker image') {
             steps {
-                script {docker.build("${IMAGE_NAME}:${TAG}")
+                script {
+			docker.build("${IMAGE_NAME}:${TAG}")
                  
                 }
             }
         }
         stage('run docker container') {
             steps {
-                sh 'docker rm -f hello-app || true'
                 sh "docker run -d --name hello-app -p 8090:8090 ${IMAGE_NAME}:${TGA}"
             }
         }   
